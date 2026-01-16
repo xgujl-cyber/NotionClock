@@ -8,8 +8,8 @@
         :root { --bg-yellow: #fccc59; --text-white: #ffffff; }
         body { background-color: transparent; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; overflow: hidden; }
         
-        /* ★上のパディングを 14px -> 25px に大幅増。これで日付・時刻・バーがガッツリ下がります */
-        .clock-card { width: 326px; padding: 25px 20px 6px 20px; background-color: var(--bg-yellow); color: var(--text-white); border-radius: 15px; box-sizing: border-box; }
+        /* ★上のパディングを 25px -> 18px に戻し、程よく押し下げました */
+        .clock-card { width: 326px; padding: 18px 20px 6px 20px; background-color: var(--bg-yellow); color: var(--text-white); border-radius: 15px; box-sizing: border-box; }
         
         .main-container { display: flex; align-items: flex-end; justify-content: center; width: 100%; margin-bottom: 1px; }
         .box { display: flex; flex-direction: column; }
@@ -38,9 +38,9 @@
         .timeline-ticks span { width: 4px; height: 8px; background-color: #ffffff; opacity: 0.5; flex-shrink: 0; border-radius: 2px; }
         .timeline-ticks span.major { height: 12px; opacity: 0.9; }
         
-        /* ★ margin-top を -6px -> -17px に変更。
-           全体がさらに11px下がった分、数字だけを強力に上に引き戻して「数字の位置」をキープしています */
-        .timeline-labels { display: flex; justify-content: space-between; width: 100%; margin-top: -17px; }
+        /* ★ margin-top を -17px -> -10px に修正。
+           数字の位置を固定したまま、日付やバーとの距離を自然に詰めました */
+        .timeline-labels { display: flex; justify-content: space-between; width: 100%; margin-top: -10px; }
         .label { width: 0; display: flex; justify-content: center; align-items: center; position: relative; color: var(--text-white); font-size: 11px; font-weight: 900; }
         .label.inactive { opacity: 0.85; }
     </style>
