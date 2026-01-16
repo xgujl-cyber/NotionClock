@@ -7,25 +7,44 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
         :root { --bg-yellow: #fccc59; --text-white: #ffffff; }
         body { background-color: transparent; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; overflow: hidden; }
-        .clock-card { width: 390px; padding: 15px 25px; background-color: var(--bg-yellow); color: var(--text-white); border-radius: 15px; box-sizing: border-box; }
-        .main-container { display: flex; align-items: flex-end; justify-content: center; width: 100%; margin-bottom: 0px; }
+        
+        /* ★全体の横幅を W03 と同じ 326px に、パディングを少し詰めて縦も短縮 */
+        .clock-card { width: 326px; padding: 12px 20px; background-color: var(--bg-yellow); color: var(--text-white); border-radius: 15px; box-sizing: border-box; }
+        
+        .main-container { display: flex; align-items: flex-end; justify-content: center; width: 100%; margin-bottom: 4px; }
         .box { display: flex; flex-direction: column; }
-        .date-section { width: 130px; text-align: center; align-items: center; }
-        .time-section { width: 150px; text-align: center; }
-        .label-top { font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 2px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+        
+        /* ★セクション幅をカードに合わせて微調整 */
+        .date-section { width: 110px; text-align: center; align-items: center; }
+        .time-section { width: 130px; text-align: center; }
+        
+        .label-top { font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 2px; display: flex; align-items: center; justify-content: center; gap: 6px; }
         .sub-divider { opacity: 0.4; font-weight: 300; }
-        .date-main { font-size: 48px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
-        .vertical-divider { width: 6px; height: 46px; background-color: var(--text-white); opacity: 0.4; margin: 0 20px 4px 20px; border-radius: 3px; flex-shrink: 0; }
-        .time-main { font-size: 56px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; margin-bottom: 0px; }
+        
+        /* ★日付のサイズを 48px -> 38px に縮小 */
+        .date-main { font-size: 38px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
+        
+        /* ★ディバイダーの高さも文字に合わせて調整 */
+        .vertical-divider { width: 6px; height: 38px; background-color: var(--text-white); opacity: 0.4; margin: 0 15px 4px 15px; border-radius: 3px; flex-shrink: 0; }
+        
+        /* ★時刻のサイズを 56px -> 48px に縮小 */
+        .time-main { font-size: 48px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; margin-bottom: 0px; }
+        
         .timeline-area { position: relative; width: 100%; }
         .pointer-track { position: relative; width: 100%; height: 8px; }
         .pointer { position: absolute; font-size: 10px; top: -2px; transform: translateX(-50%); transition: left 0.5s ease; z-index: 10; }
+        
+        /* ★タイムラインの高さ・太さは維持 */
         .timeline-base { position: relative; width: 100%; height: 16px; display: flex; align-items: center; margin-bottom: 0px; }
         .timeline-bar-bg { width: 100%; height: 6px; background-color: rgba(255, 255, 255, 0.25); border-radius: 3px; position: absolute; top: 50%; transform: translateY(-50%); overflow: hidden; }
         .progress-fill { height: 100%; width: 0%; background-color: rgba(255, 255, 255, 0.7); transition: width 0.5s ease; z-index: 1; }
+        
+        /* ★目盛りのサイズは維持 */
         .timeline-ticks { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: space-between; align-items: center; z-index: 5; pointer-events: none; }
         .timeline-ticks span { width: 4px; height: 8px; background-color: #ffffff; opacity: 0.5; flex-shrink: 0; border-radius: 2px; }
         .timeline-ticks span.major { height: 12px; opacity: 0.9; }
+        
+        /* ★目盛りの文字サイズは維持 */
         .timeline-labels { display: flex; justify-content: space-between; width: 100%; margin-top: 2px; }
         .label { width: 0; display: flex; justify-content: center; align-items: center; position: relative; color: var(--text-white); font-size: 11px; font-weight: 900; }
         .label.inactive { opacity: 0.85; }
