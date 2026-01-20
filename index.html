@@ -8,10 +8,10 @@
         :root { --bg-yellow: #fccc59; --text-white: #ffffff; }
         body { background-color: transparent; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; overflow: hidden; }
         
-        /* ★上下パディングを調整し、全体の高さを短縮しました */
         .clock-card { 
             width: 326px; 
-            padding: 22px 20px; 
+            /* 上下パディングを8pxに縮小 */
+            padding: 8px 20px; 
             background-color: var(--bg-yellow); 
             color: var(--text-white); 
             border-radius: 15px; 
@@ -28,7 +28,8 @@
             text-transform: uppercase; 
             letter-spacing: 0.1em; 
             opacity: 0.85; 
-            margin-bottom: 8px; 
+            /* 下のマージンを0に */
+            margin-bottom: 0px; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
@@ -36,7 +37,6 @@
         }
         .sub-divider { opacity: 0.4; font-weight: 300; }
 
-        /* ★下部のマージンを 0 にして高さを詰めました */
         .main-container { 
             display: flex; 
             align-items: flex-end; 
@@ -48,19 +48,22 @@
         .date-section { flex: 1; text-align: center; }
         .time-section { flex: 1; text-align: center; }
         
-        .date-main { font-size: 48px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
+        /* フォントサイズを40pxに縮小 */
+        .date-main { font-size: 40px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
         
         .vertical-divider { 
             width: 6px; 
-            height: 44px; 
+            /* 文字に合わせて高さを32pxに調整 */
+            height: 32px; 
             background-color: var(--text-white); 
             opacity: 0.4; 
-            margin: 0 0 2px 0; 
+            margin: 0 0 4px 0; 
             border-radius: 3px; 
             flex-shrink: 0; 
         }
         
-        .time-main { font-size: 48px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+        /* フォントサイズを40pxに縮小 */
+        .time-main { font-size: 40px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
     </style>
 </head>
 <body>
