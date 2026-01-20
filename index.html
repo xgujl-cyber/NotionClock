@@ -8,10 +8,10 @@
         :root { --bg-yellow: #fccc59; --text-white: #ffffff; }
         body { background-color: transparent; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; overflow: hidden; }
         
+        /* ★上下パディングを調整し、全体の高さを短縮しました */
         .clock-card { 
             width: 326px; 
-            /* 上下パディングを12pxに短縮 */
-            padding: 12px 20px; 
+            padding: 22px 20px; 
             background-color: var(--bg-yellow); 
             color: var(--text-white); 
             border-radius: 15px; 
@@ -28,8 +28,7 @@
             text-transform: uppercase; 
             letter-spacing: 0.1em; 
             opacity: 0.85; 
-            /* 下のマージンを2pxに短縮 */
-            margin-bottom: 2px; 
+            margin-bottom: 8px; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
@@ -37,6 +36,7 @@
         }
         .sub-divider { opacity: 0.4; font-weight: 300; }
 
+        /* ★下部のマージンを 0 にして高さを詰めました */
         .main-container { 
             display: flex; 
             align-items: flex-end; 
@@ -52,8 +52,7 @@
         
         .vertical-divider { 
             width: 6px; 
-            /* 全体に合わせて高さを40pxに調整 */
-            height: 40px; 
+            height: 44px; 
             background-color: var(--text-white); 
             opacity: 0.4; 
             margin: 0 0 2px 0; 
