@@ -10,8 +10,8 @@
         
         .clock-card { 
             width: 326px; 
-            /* 上下パディングを8pxに縮小 */
-            padding: 8px 20px; 
+            /* ★上下パディングを14pxに増やして高さを確保 */
+            padding: 14px 20px; 
             background-color: var(--bg-yellow); 
             color: var(--text-white); 
             border-radius: 15px; 
@@ -28,8 +28,8 @@
             text-transform: uppercase; 
             letter-spacing: 0.1em; 
             opacity: 0.85; 
-            /* 下のマージンを0に */
-            margin-bottom: 0px; 
+            /* ★下のマージンを4pxに設定して余白を追加 */
+            margin-bottom: 4px; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
@@ -48,12 +48,10 @@
         .date-section { flex: 1; text-align: center; }
         .time-section { flex: 1; text-align: center; }
         
-        /* フォントサイズを40pxに縮小 */
         .date-main { font-size: 40px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
         
         .vertical-divider { 
             width: 6px; 
-            /* 文字に合わせて高さを32pxに調整 */
             height: 32px; 
             background-color: var(--text-white); 
             opacity: 0.4; 
@@ -62,7 +60,6 @@
             flex-shrink: 0; 
         }
         
-        /* フォントサイズを40pxに縮小 */
         .time-main { font-size: 40px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
     </style>
 </head>
