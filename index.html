@@ -20,7 +20,6 @@
             align-items: center;
         }
         
-        /* ★ラベルを独立させ、ウィジェットの中央に配置 */
         .label-top { 
             width: 100%;
             font-size: 11.5px; 
@@ -44,16 +43,16 @@
             margin-bottom: 22px; 
         }
 
-        /* ★左右のエリアを均等幅にすることで、縦線を中央に固定 */
         .date-section { flex: 1; text-align: center; }
         .time-section { flex: 1; text-align: center; }
         
-        .date-main { font-size: 44px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
+        /* ★フォントサイズを 44px -> 52px に拡大 */
+        .date-main { font-size: 52px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
         
-        /* ★ウィジェットの真ん中に来る縦線 */
+        /* ★高さを 40px -> 48px に延長 */
         .vertical-divider { 
             width: 6px; 
-            height: 40px; 
+            height: 48px; 
             background-color: var(--text-white); 
             opacity: 0.4; 
             margin: 0 0 2px 0; 
@@ -61,7 +60,8 @@
             flex-shrink: 0; 
         }
         
-        .time-main { font-size: 44px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+        /* ★フォントサイズを 44px -> 52px に拡大 */
+        .time-main { font-size: 52px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
         
         .timeline-area { position: relative; width: 100%; }
         .pointer-track { position: relative; width: 100%; height: 8px; }
