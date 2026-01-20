@@ -8,7 +8,15 @@
         :root { --bg-yellow: #fccc59; --text-white: #ffffff; }
         body { background-color: transparent; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; overflow: hidden; }
         
-        .clock-card { width: 326px; padding: 10px 20px 6px 20px; background-color: var(--bg-yellow); color: var(--text-white); border-radius: 15px; box-sizing: border-box; }
+        /* ★上下の余白（padding）を増やして縦幅を拡張しました */
+        .clock-card { 
+            width: 326px; 
+            padding: 15px 20px 11px 20px; 
+            background-color: var(--bg-yellow); 
+            color: var(--text-white); 
+            border-radius: 15px; 
+            box-sizing: border-box; 
+        }
         
         .main-container { display: flex; align-items: flex-end; justify-content: center; width: 100%; margin-bottom: 1px; }
         .box { display: flex; flex-direction: column; }
@@ -37,10 +45,8 @@
         .timeline-ticks span { width: 4px; height: 8px; background-color: #ffffff; opacity: 0.5; flex-shrink: 0; border-radius: 2px; }
         .timeline-ticks span.major { height: 12px; opacity: 0.9; }
         
-        /* ★ margin-top を -2px -> 0px に変更して数字をわずかに下げました */
         .timeline-labels { display: flex; justify-content: space-between; width: 100%; margin-top: 0px; }
         
-        /* ★ font-size を 11px -> 10px に縮小 */
         .label { width: 0; display: flex; justify-content: center; align-items: center; position: relative; color: var(--text-white); font-size: 10px; font-weight: 900; }
         .label.inactive { opacity: 0.85; }
     </style>
