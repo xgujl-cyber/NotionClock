@@ -10,32 +10,58 @@
         
         .clock-card { 
             width: 326px; 
-            padding: 30px 20px 25px 20px; 
+            padding: 25px 20px 25px 20px; 
             background-color: var(--bg-yellow); 
             color: var(--text-white); 
             border-radius: 15px; 
             box-sizing: border-box; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
-        /* ★margin-bottom を 15px -> 22px に増やしてタイムラインエリアを下げました */
-        .main-container { display: flex; align-items: flex-end; justify-content: center; width: 100%; margin-bottom: 22px; }
-        .box { display: flex; flex-direction: column; }
-        
-        .date-section { width: 100px; text-align: center; align-items: center; }
-        .time-section { width: 120px; text-align: center; }
-        
-        /* ★font-size を 11.5px に上げ、margin-bottom で位置を微調整しました */
-        .label-top { font-size: 11.5px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 4px; display: flex; align-items: center; justify-content: center; gap: 5px; }
+        /* ★ラベルを独立させ、ウィジェットの中央に配置 */
+        .label-top { 
+            width: 100%;
+            font-size: 11.5px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: 0.1em; 
+            opacity: 0.85; 
+            margin-bottom: 8px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 6px; 
+        }
         .sub-divider { opacity: 0.4; font-weight: 300; }
+
+        .main-container { 
+            display: flex; 
+            align-items: flex-end; 
+            justify-content: center; 
+            width: 100%; 
+            margin-bottom: 22px; 
+        }
+
+        /* ★左右のエリアを均等幅にすることで、縦線を中央に固定 */
+        .date-section { flex: 1; text-align: center; }
+        .time-section { flex: 1; text-align: center; }
         
-        /* ★時刻とサイズを統一 (36px) */
-        .date-main { font-size: 36px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
+        .date-main { font-size: 44px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
         
-        /* ★文字サイズに合わせて高さを調整 */
-        .vertical-divider { width: 6px; height: 34px; background-color: var(--text-white); opacity: 0.4; margin: 0 12px 2px 12px; border-radius: 3px; flex-shrink: 0; }
+        /* ★ウィジェットの真ん中に来る縦線 */
+        .vertical-divider { 
+            width: 6px; 
+            height: 40px; 
+            background-color: var(--text-white); 
+            opacity: 0.4; 
+            margin: 0 0 2px 0; 
+            border-radius: 3px; 
+            flex-shrink: 0; 
+        }
         
-        /* ★日付とサイズを統一 (36px) */
-        .time-main { font-size: 36px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; margin-bottom: 0px; }
+        .time-main { font-size: 44px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
         
         .timeline-area { position: relative; width: 100%; }
         .pointer-track { position: relative; width: 100%; height: 8px; }
@@ -57,20 +83,24 @@
 </head>
 <body>
     <div class="clock-card">
+        <div class="label-top">
+            <span id="display-year">-</span><span class="sub-divider">|</span>
+            <span id="display-month-en">-</span><span class="sub-divider">|</span>
+            <span id="display-weekday-short">-</span>
+        </div>
+
         <div class="main-container">
-            <div class="box date-section">
-                <div class="label-top">
-                    <span id="display-year">-</span><span class="sub-divider">|</span>
-                    <span id="display-month-en">-</span><span class="sub-divider">|</span>
-                    <span id="display-weekday-short">-</span>
-                </div>
+            <div class="date-section">
                 <div class="date-main" id="display-m-d">-/-</div>
             </div>
+            
             <div class="vertical-divider"></div>
-            <div class="box time-section">
+            
+            <div class="time-section">
                 <div class="time-main" id="display-time">--:--</div>
             </div>
         </div>
+
         <div class="timeline-area">
             <div class="pointer-track"><div id="time-pointer" class="pointer">▼</div></div>
             <div class="timeline-base">
