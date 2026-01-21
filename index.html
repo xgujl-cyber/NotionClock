@@ -10,7 +10,8 @@
         
         .clock-card { 
             width: 326px; 
-            padding: 24px 20px; 
+            /* 全体の大きさを維持しつつ内部バランスを調整 */
+            padding: 22px 20px; 
             background-color: var(--bg-yellow); 
             color: var(--text-white); 
             border-radius: 15px; 
@@ -22,46 +23,47 @@
         
         .label-top { 
             width: 100%;
-            font-size: 12.5px; 
+            /* ★上部ラベルを少し大きく */
+            font-size: 14px; 
             font-weight: 900; 
             text-transform: uppercase; 
-            letter-spacing: 0.1em; 
-            opacity: 1; /* 文字は白 */
-            /* ★エリア間の余白を 10px に増やして調整 */
-            margin-bottom: 10px; 
+            letter-spacing: 0.12em; 
+            opacity: 1;
+            margin-bottom: 12px; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
-            gap: 6px; 
+            gap: 8px; 
         }
         
-        /* ★上部の区切り線のみ以前の薄いグレー（透過）に復元 */
         .sub-divider { opacity: 0.4; font-weight: 300; }
 
         .main-container { 
             display: flex; 
-            align-items: flex-end; 
+            align-items: center; /* 中央揃えでバランスを調整 */
             justify-content: center; 
             width: 100%; 
-            margin-bottom: 0; 
         }
 
         .date-section { flex: 1; text-align: center; }
         .time-section { flex: 1; text-align: center; }
         
-        .date-main { font-size: 40px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
+        /* ★日付を大きく */
+        .date-main { font-size: 46px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
         
+        /* ★縦線を太く、高く */
         .vertical-divider { 
-            width: 6px; 
-            height: 32px; 
+            width: 7.5px; 
+            height: 38px; 
             background-color: var(--text-white); 
             opacity: 0.4; 
-            margin: 0 0 4px 0; 
-            border-radius: 3px; 
+            margin: 0 4px; 
+            border-radius: 4px; 
             flex-shrink: 0; 
         }
         
-        .time-main { font-size: 40px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+        /* ★時刻を大きく */
+        .time-main { font-size: 46px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
     </style>
 </head>
 <body>
