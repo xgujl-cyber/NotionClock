@@ -10,8 +10,8 @@
         
         .clock-card { 
             width: 326px; 
-            /* ★上下パディングを14pxに増やして高さを確保 */
-            padding: 14px 20px; 
+            /* ★上下パディングを24pxに増やしてさらに縦に大きく調整 */
+            padding: 24px 20px; 
             background-color: var(--bg-yellow); 
             color: var(--text-white); 
             border-radius: 15px; 
@@ -27,15 +27,16 @@
             font-weight: 900; 
             text-transform: uppercase; 
             letter-spacing: 0.1em; 
-            opacity: 0.85; 
-            /* ★下のマージンを4pxに設定して余白を追加 */
+            /* ★文字の色をすべて白にするため opacity を 1 に変更 */
+            opacity: 1; 
             margin-bottom: 4px; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
             gap: 6px; 
         }
-        .sub-divider { opacity: 0.4; font-weight: 300; }
+        /* ★上部の区切り文字も白にするため opacity を 1 に変更 */
+        .sub-divider { opacity: 1; font-weight: 300; }
 
         .main-container { 
             display: flex; 
@@ -54,6 +55,7 @@
             width: 6px; 
             height: 32px; 
             background-color: var(--text-white); 
+            /* ★縦線の色は今のまま（0.4）を維持 */
             opacity: 0.4; 
             margin: 0 0 4px 0; 
             border-radius: 3px; 
